@@ -1,23 +1,89 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head>
-    <title>Lockdown Radius</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
-</head>
-<body>
-  <script>
-    $(function(){
-      // Initialization code
-      $('ons-button').on('click', function(e) {
-        ons.notification.alert('Button is tapped!');
-      })
-    });
-  </script>
-  <ons-button>Click me!</ons-button>
-</body>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+			
+
+				<!-- Nav -->
+					<nav id="nav">
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">April 25, 2017</span>
+									<h1>עד לאן מותר לי לצאת?</h1>
+									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
+									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+									amet nullam sed etiam veroeros.</p>
+								</header>
+								<div style="width: 640px; height: 480px" id="mapContainer"></div>
+								
+							</section>
+
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+			<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+			<script>
+				var platform = new H.service.Platform({
+  					'apikey': '{FFjVDe3cte8PuO5nDPBGse_fbrsczguB5nUc3kvmwjY}'
+				});
+
+				// Obtain the default map types from the platform object:
+				var defaultLayers = platform.createDefaultLayers();
+
+				// Instantiate (and display) a map object:
+				var map = new H.Map(
+					document.getElementById('mapContainer'),
+					defaultLayers.vector.normal.map,
+					{
+					zoom: 10,
+					center: { lat: 52.5, lng: 13.4 }
+					});
+
+			</script>
+
+	</body>
+	<script>
+		$( document ).ready(function() {
+			window.navigator.geolocation.getCurrentPosition(console.log, console.log);
+		});
+
+	</script>
 </html>
 
+<!--FFjVDe3cte8PuO5nDPBGse_fbrsczguB5nUc3kvmwjY-->
+<!--CeaiWJg89rTDZT2jBiyZ-->
